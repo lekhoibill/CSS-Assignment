@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+    <style>
+         .view-first img {
+            transition: all 0.2s linear;
+          
+        }
+
+        .view-first .mask {
+            opacity: 0;
+            background-color: rgba(219, 127, 8, 0.7);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .view-first h2 {
+            transform: translateY(-100px);
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .view-first p {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.2s linear;
+        }
+
+        .view-first a.info {
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Hiệu ứng hover */
+        .view-first:hover img {
+            transform: scale(1.1);
+        }
+
+        .view-first:hover .mask {
+            opacity: 1;
+        }
+
+        .view-first:hover h2,
+        .view-first:hover p,
+        .view-first:hover a.info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="view-first">
+        <img src="https://placehold.co/600x400"
+            alt="Image Description" />
+        <div class="mask">
+            <h2>Title</h2>
+            <p>Your Text</p>
+            <a href="#" class="info">Read More</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
