@@ -1,3 +1,4 @@
+
 body {
     font-family: "Poppins", sans-serif;
     display: flex;
@@ -5,29 +6,31 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(290deg, #bcf05d, #feb47b, #1f706c, #fcb15c,#7fc2b7);
+    background: linear-gradient(274deg, #0045a7,#dfd0c1,#e7bb81,#c6f5c5,#f3a862,#503944);
     background-size: 800% 800%;
-    animation: gradientdichuyen 10s ease infinite;
+    animation: gradientdichuyen 15s ease-in-out infinite;
 }
 
-h1 {
+.mon {
     text-align: center;
     color: #ffffff;
-    margin-bottom: 20px;
     animation: phatsang 3s infinite;
+    margin-bottom: 20px;
 }
 
-h1 span {
+.gt {
+    font-size: 40px;
     color: #ffffff;
     font-weight: bold;
-    font: size 20px;
     animation: text-shadow-multicolor2 1.2s linear 0.2s infinite normal forwards;
+    text-align: center;
 }
 
 
 #logo {
     width: 500px;
     margin-top: 20px;
+    margin-bottom: ;
 }
 
 .image-grid {
@@ -87,8 +90,44 @@ h1 span {
     /* Hiển thị overlay khi hover */
 }
 
+.bt ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    list-style: none;
+    padding: 0; 
+    
+}
 
+.bt li{
+    font-family: "Poppins";
+    font-weight: bold;
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Tạo hiệu ứng mượt khi hover */
+}
+.bt li:hover {
+    transform: scale(1.1); /* Tăng kích thước lên 10% khi hover */
+    color: #ff5733; /* Đổi màu chữ khi hover (bạn có thể thay bằng màu khác theo ý thích) */
+}
 
+.bt a {
+    text-decoration: none;
+}
+
+.gtext{
+    color:#c1d8f8;
+    margin-top: 50px;
+    background-size: 400% 400%;
+    background-clip: text;
+    animation: text-shadow-multicolor2 1.2s linear 0.2s infinite normal forwards;
+}
+  
 @keyframes gradientdichuyen {
     0% {
         background-position: 0% 50%;
