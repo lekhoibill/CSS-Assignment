@@ -31,9 +31,12 @@ h2, h3, h4 {
     font-weight: 300;
 }
 .container {
-	padding: 25px;
-    width: 100%;
-
+	display: grid;
+    	grid-template-columns: repeat(10, 1fr); /* 10 equal columns */
+    	grid-template-rows: 175px 75px 175px 275px; /* Four rows with different heights */
+   	gap: 25px; /* 25px gap between grid items */
+   	padding: 25px;
+    	width: 100%;
  }
  .container > div {
      background-color: #616E7C;
@@ -41,15 +44,84 @@ h2, h3, h4 {
      border: 0;
      border-radius: 3px;
      padding: 1.5em;
-	 box-shadow: 2px 2px 2px 2px hsla(0,0%,75%,0.2);
+     box-shadow: 2px 2px 2px 2px hsla(0,0%,75%,0.2);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-size: cover;
+     background-position: center;
  }
 
- /* add your styles */
 
+/* Grid cell positioning based on layout */
+#A { grid-column: span 2; grid-row: 1 / 2; }
+#B { grid-column: span 2; grid-row: 1 / 2; background-image: url('images/a.jpg'); }
+#C { grid-column: span 2; grid-row: 1 / 2; background-image: url('images/b.jpg'); }
+#D { grid-column: span 2; grid-row: 1 / 2; background-image: url('images/c.jpg'); }
+#E { grid-column: span 2; grid-row: 1 / 2; background-image: url('images/e.jpg'); }
+#F { grid-column: span 2; grid-row: 1 / 2; background-image: url('images/f.jpg'); }
+
+#G { grid-column: span 2; grid-row: 2 / 3; }
+#H { grid-column: span 2; grid-row: 2 / 4; background-image: url('images/h.jpg'); }
+#I { grid-column: span 2; grid-row: 2 / 3; }
+#J { grid-column: span 2; grid-row: 2 / 3; }
+#K { grid-column: span 2; grid-row: 2 / 3; }
+
+#L { grid-column: span 2; grid-row: 3 / 4; background-image: url('images/l.jpg'); }
+#M { grid-column: span 2; grid-row: 3 / 4; background-image: url('images/m.jpg'); }
+
+#N { grid-column: span 2; grid-row: 4 / 5; }
+#O { grid-column: span 2; grid-row: 4 / 5; background-image: url('images/o.jpg'); }
+#P { grid-column: span 2; grid-row: 4 / 5; background-image: url('images/p.jpg'); }
+#Q { grid-column: span 2; grid-row: 4 / 5; background-image: url('images/q.jpg'); }
+
+/* Buttons and text styling inside specific cells if needed */
+#D button, #J button {
+    padding: 0.5em 1em;
+    background-color: var(--color-block-4);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* styles for mobile protrait screen */
+#I i, #K i {
+    font-size: 2em;
+    color: var(--color-text-light);
+}
 
+/* Images inside specific cells */
+.container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
 
+/* Responsive Design */
 
-/* styles for tablet portrait and mobile landscape screens */
+/* Tablet portrait and mobile landscape screens */
+@media (max-width: 1100px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .container {
+        grid-template-columns: repeat(5, 1fr); /* Adjust columns for tablet */
+    }
+}
+
+/* Mobile portrait screens */
+@media (max-width: 850px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Single-column layout for mobile */
+        grid-template-rows: auto; /* Custom row heights if needed */
+    }
+
+    .container > div {
+        padding: 1em; /* Reduce padding for smaller screens */
+    }
+}
